@@ -13,11 +13,17 @@ html, body {
   div {
     border: 1px solid #fff;
     /* border-radius: 300px; */
-    height: calc(100% - 0.09vh);
     left: 50%;
     position: absolute;
     top: 50%;
-    transform: translate(-50%, -50%) rotate(var(--rot)) rotateX(var(--roty)) scale(.95);
-    width: calc(100% - 0.5vw);
+    transform: translate(-50%, -50%) rotate(var(--rot)) rotateX(var(--roty)) scale(.91);
+    /* height: calc(100% - 0.09vh); */
+    height:  120vh;
+    width: 120vw;
+    /* width: calc(100% - 0.5vw); */
+  }
+
+  .colored {
+    border: 1px solid #fff;
   }
 
