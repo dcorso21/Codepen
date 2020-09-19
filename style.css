@@ -1,0 +1,23 @@
+html, body {
+    background: black;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  :root {
+    --rot: 0deg;
+    --roty: 0deg;
+
+  }
+  
+  div {
+    border: 1px solid #fff;
+    /* border-radius: 300px; */
+    height: calc(100% - 0.09vh);
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(var(--rot)) rotateX(var(--roty)) scale(.95);
+    width: calc(100% - 0.5vw);
+  }
+
