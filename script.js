@@ -30,14 +30,12 @@ var buttons = el(".btn"),
 buttons.forEach((element) => {
     element.addEventListener("click", (event) => {
         let id = event.target.id;
-        console.log(currentEntry)
         //clear upper left
         // if (currentOperators === []) {
             //     document.getElementById("expression").textContent = "";
             // }
         // Resume
         if (currentEntry[0].length === 0 && operators.includes(id)) {
-            console.log('[\"\"]')
             currentEntry = [last.answer];
             currentDisplay = String(last.display);
         }
@@ -100,7 +98,6 @@ function calculate() {
             currentEntry[fniter] = result;
             currentEntry[sniter] = "<-";
         }
-        console.log(currentEntry, currentOperators);
     }
     answer = currentEntry[0];
     displayEntry(true);
@@ -124,7 +121,6 @@ function scanEntries(i, asc = true) {
     let entry = currentEntry[i];
     while (entry == "<-") {
         asc ? i++ : i--;
-        console.log(currentEntry);
         entry = currentEntry[i];
     }
     return [entry, i];
