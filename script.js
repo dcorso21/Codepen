@@ -1,14 +1,21 @@
-function reflex(meth, ...args) {
-    /* This is a docstring
-    Here */
-    var add = (num_a=2, num_b=3) => {
+class CALC {
+    constructor() {
+        this.description = "Calculation Functions";
+    }
+
+    add(num_a, num_b) {
         return num_a + num_b;
     }
-    let meths = {
-        add_vals: add(),
-    };
-    return meths;
+    subtract(num_a, num_b) {
+        return num_a - num_b;
+    }
+    divide(num_a, num_b) {
+        return num_a / num_b;
+    }
 }
 
-var s = reflex('add', [1,2]);
-console.log(s)
+const Calc = new CALC();
+
+let s = Calc.divide(1, 2);
+console.log(s);
+// console.log(s);
